@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  
+
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Book - Wikipedia</title>
@@ -25,7 +25,7 @@
 </head>
 <!--  -->
 
-<body mv-app="main" mv-bar="none" mv-source="shapir" mv-source-service="wikidata" mv-source-id="[url('book') or 'Q555967']"
+<body mv-app="main" mv-bar="none" mv-source="shapir" mv-source-service="wikidata" mv-source-id="[url('id') or 'Q555967']"
     mv-source-language="es">
 
 
@@ -42,17 +42,14 @@
 
       <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
         <ul class="navbar-nav">
-
           <li class="nav-item">
-            <a class="nav-link active" href="books.html">Inicio</a>
+            <a class="nav-link active" href="index.html">Home</a>
           </li>
-
           <li class="nav-item">
-            <a class="nav-link" href="">Acerca de</a>
+            <a class="nav-link" href="">About</a>
           </li>
-
           <li class="nav-item">
-            <a class="nav-link " href="">Contáctenos</a>
+            <a class="nav-link " href="">Contact</a>
           </li>
         </ul>
       </div>
@@ -73,7 +70,7 @@
 
             </div>
           </div>
-          <div class="col-md-12 col-lg-4">
+          <!-- <div class="col-md-12 col-lg-4">
             <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
@@ -84,7 +81,7 @@
                 </li>
               </ol>
             </nav>
-          </div>
+          </div> -->
         </div>
       </div>
     </section><!-- End Intro Single-->
@@ -97,34 +94,14 @@
               <img property="imagen" width="20%" alt="" class="img-fluid">
             </div>
           <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-            <div class="post-information">
-              <ul class="list-inline text-center color-a">
-                <li class="list-inline-item mr-2">
-                  <strong >Author: </strong>
-                  <span property= "autor" class="color-text-a"><!-- property="autor" to call the books author -->
-                    <span property ="label"></span> <!-- Since it's hyperlink we need to add "label" to encode json -->
-                  </span>
-                </li>
-                <li class="list-inline-item mr-2">
-                  <strong>Genere: </strong>
-                  <span property="género" class="color-text-a"><!-- property="género" to call the books genere -->
-                    <span property ="label"></span> <!-- Encode json -->
-                  </span> 
-                </li>
-                <li class="list-inline-item">
-                  <strong>Puplication date: </strong>
-                  <span property="fecha-de-publicación" class="color-text-a"><!-- property="fecha-de-publicación" to call the books date --> 
-                  </span>
-                </li>
-              </ul>
-            </div>
+
             <div class="post-content color-text-a">
-              <div property="Wikipedia"> <!-- property="Wikipedia" to call --> 
+              <div property="Wikipedia"> <!-- property="Wikipedia" to call -->
                     <div property="sections" mv-multiple>
                       <h4 property="title"></h4>
                       <div property="paragraphs" mv-multiple>
                         <div property="sentences" mv-group>
-                          <p>[join(text, " ")]</p> 
+                          <p>[join(text, " ")]</p>
                         </div>
                       </div>
                     </div>

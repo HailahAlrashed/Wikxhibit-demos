@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Books</title>
+  <!-- Wikxhibit -->
+  <script src="https://get.mavo.io/stable/mavo.js"></script>
+  <link rel="stylesheet" href="https://get.mavo.io/stable/mavo.css">
+  <script type="module" src="https://shapir.org/mavo-shapir.js"></script>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=lato:300,400,500,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <!-- CSS -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body mv-app="main" mv-bar="none" mv-source="shapir" mv-source-service="wikidata" mv-source-author="[name]"
+  mv-source-language="[lang]" mv-source-numberOfItems=10>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+
+      <a class="navbar-brand text-brand" href="">Digital<span class="color-b">Humanities</span></a>
+
+      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <main id="main">
+
+    <!-- Title -->
+    <section class="intro-single">
+      <div class="container">
+
+        <div class="d-flex justify-content-end">
+          <form class="search" mv-action="set(name, searchInput)">
+            <label>Author: <input type="search" class="form-control rounded" property="searchInput"
+                value="Miguel de Cervantes" /> </label>
+            <meta property="name" mv-default="Miguel de Cervantes">
+            <meta property="lang" mv-default="en">
+            <button class="btn btn-outline-dark">Search</button>
+          </form>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-lg-8">
+            <div class="title-single-box">
+              <h1 class="title-single">[name]</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Title -->
+
+    <!-- Grid -->
+    <section class="grid d-flex justify-content-end">
+      <div class="container">
+        <div class="col-md-4 img-grid">
+          <div class="card-box card-shadow" property="items" mv-multiple>
+
+            <div class="img-box">
+              <img property="image" alt="" class="img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header">
+                  <meta property="title" />
+                  <meta property="label" />
+                  <h2 class="card-title">[title or label]</h2>
+                  <p style="color:white !important" class="desc-text" property="description"></p>
+                </div>
+                <div class="card-body">
+                  <div class="desc-box d-flex">
+                    <a href="book.html?id=[itemID]" target="_blank" class="desc">Wikisource</a>
+                    <a href="article.html?id=[itemID]" target="_blank" class="desc">Wikipedia</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- End main -->
+
+  <!--  Footer  -->
+  <footer>
+    <p class="copyright color-text-a"> &copy; Copyright <span class="color-a">MIT</span> All Rights Reserved. </p>
+  </footer><!-- End  Footer -->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
